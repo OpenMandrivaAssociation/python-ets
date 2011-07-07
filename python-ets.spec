@@ -1,7 +1,7 @@
 %define module	ets
 %define name	python-%{module}
 %define version 4.0.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary:	Enthought Tool Suite
 Name: 	 	%{name}
@@ -14,6 +14,7 @@ Url: 	 	http://code.enthought.com/projects/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 Obsoletes:	python-enthought
+Obsoletes:	python-enthought-enthoughtbase
 Requires: 	python-apptools == 4.0.0
 Requires: 	python-blockcanvas == 4.0.0
 Requires:	python-chaco == 4.0.0
