@@ -1,7 +1,7 @@
 %define module	ets
 %define name	python-%{module}
 %define version 4.0.0
-%define release %mkrel 2
+%define release %mkrel 3
 
 Summary:	Enthought Tool Suite
 Name: 	 	%{name}
@@ -17,7 +17,7 @@ Obsoletes:	python-enthought
 Obsoletes:	python-enthought-enthoughtbase
 Requires: 	python-apptools == 4.0.0
 Requires: 	python-blockcanvas == 4.0.0
-Requires:	python-chaco == 4.0.0
+Requires:	python-chaco == 4.0.1
 Requires:	python-codetools == 4.0.0
 Requires: 	python-enable == 4.0.0
 Requires: 	python-envisage == 4.0.0
