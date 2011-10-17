@@ -1,13 +1,14 @@
 %define module	ets
 %define name	python-%{module}
 %define version 4.0.0
-%define release %mkrel 3
+%define release %mkrel 4
 
 Summary:	Enthought Tool Suite
 Name: 	 	%{name}
 Version: 	%{version}
 Release: 	%{release}
 Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
+Patch0:		pythonegg-version-4.0.0.patch
 License: 	BSD
 Group: 	 	Development/Python
 Url: 	 	http://code.enthought.com/projects/
@@ -40,6 +41,7 @@ components comprised by the suite.
 
 %prep 
 %setup -q -n %{module}-%{version}
+%patch0 -p0
 
 %install
 %__rm -rf %{buildroot}
