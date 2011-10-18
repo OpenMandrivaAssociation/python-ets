@@ -1,7 +1,7 @@
 %define module	ets
 %define name	python-%{module}
 %define version 4.0.0
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary:	Enthought Tool Suite
 Name: 	 	%{name}
@@ -28,7 +28,7 @@ Requires: 	python-mayavi == 4.0.0
 Requires: 	python-pyface == 4.0.0
 Requires: 	python-scimath == 4.0.0
 Requires: 	python-traits == 4.0.0
-Requires: 	python-traitsui == 4.0.0
+Requires: 	python-traitsui == 4.0.1
 BuildRequires: 	python-setuptools >= 0.6c8
 
 %description
