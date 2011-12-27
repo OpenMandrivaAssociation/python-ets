@@ -1,34 +1,34 @@
 %define module	ets
 %define name	python-%{module}
-%define version 4.0.0
-%define release %mkrel 6
+%define version 4.1.0
+%define release %mkrel 1
 
 Summary:	Enthought Tool Suite
 Name: 	 	%{name}
 Version: 	%{version}
 Release: 	%{release}
 Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
-Patch0:		pythonegg-version-4.0.0.patch
+Patch0:		pythonegg-version-4.1.0.patch
 License: 	BSD
 Group: 	 	Development/Python
-Url: 	 	http://code.enthought.com/projects/
+Url: 	 	https://github.com/enthought/ets/
 BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 Obsoletes:	python-enthought
 Obsoletes:	python-enthought-enthoughtbase
-Requires: 	python-apptools == 4.0.0
-Requires: 	python-blockcanvas == 4.0.0
-Requires:	python-chaco == 4.0.1
+Requires: 	python-apptools == 4.0.1
+Requires: 	python-blockcanvas == 4.0.1
+Requires:	python-chaco == 4.1.0
 Requires:	python-codetools == 4.0.0
-Requires: 	python-enable == 4.0.0
-Requires: 	python-envisage == 4.0.0
+Requires: 	python-enable == 4.1.0
+Requires: 	python-envisage == 4.1.0
 Requires: 	python-etsdevtools == 4.0.0
 Requires: 	python-graphcanvas == 4.0.0
-Requires: 	python-mayavi == 4.0.0
-Requires: 	python-pyface == 4.0.0
-Requires: 	python-scimath == 4.0.0
-Requires: 	python-traits == 4.0.0
-Requires: 	python-traitsui == 4.0.1
+Requires: 	python-mayavi == 4.1.0
+Requires: 	python-pyface == 4.1.0
+Requires: 	python-scimath == 4.0.1
+Requires: 	python-traits == 4.1.0
+Requires: 	python-traitsui == 4.1.1
 BuildRequires: 	python-setuptools >= 0.6c8
 
 %description
@@ -54,3 +54,4 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot} --record
 %files -f FILE_LIST
 %defattr(-,root,root)
 %doc *.txt *.rst
+
