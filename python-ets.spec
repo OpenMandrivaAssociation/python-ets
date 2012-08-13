@@ -35,7 +35,7 @@ Requires: 	python-scimath == 4.1.0
 Requires: 	python-traits == 4.2.0
 Requires: 	python-traitsui == 4.2.0
 BuildRequires: 	python-setuptools >= 0.6c8
-BuildRequires:	python-sphinx
+BuildRequires:	python-setupdocs, python-sphinx
 
 %description
 The Enthought Tool Suite (ETS) is a collection of Python components
@@ -48,19 +48,19 @@ components comprised by the suite.
 %prep 
 %setup -q -n %{module}-%{version}
 
+%build
+%__python setup.py build
+%__python setup.py build_docs
+
 %install
 %__rm -rf %{buildroot}
-
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
-pushd docs
-make html
-popd
 
 %clean
 %__rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
-%doc *.txt *.rst docs/build/html
+%doc *.txt *.rst build/docs/html
 %_bindir/%{module}*
 %py_sitedir/%{module}*
