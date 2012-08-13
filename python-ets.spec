@@ -35,7 +35,8 @@ Requires: 	python-scimath == 4.1.0
 Requires: 	python-traits == 4.2.0
 Requires: 	python-traitsui == 4.2.0
 BuildRequires: 	python-setuptools >= 0.6c8
-BuildRequires:	python-setupdocs, python-sphinx
+BuildRequires:	python-setupdocs >= 1.0.5
+BuildRequires:	python-sphinx
 
 %description
 The Enthought Tool Suite (ETS) is a collection of Python components
