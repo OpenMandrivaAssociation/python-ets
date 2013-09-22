@@ -1,39 +1,17 @@
 %define module	ets
-%define name	python-%{module}
-%define version 4.2.0
-%define	rel		1
-%if %mdkversion < 201100
-%define release %mkrel %{rel}
-%else
-%define	release %{rel}
-%endif
 
 Summary:	Enthought Tool Suite
-Name: 	 	%{name}
-Version: 	%{version}
-Release: 	%{release}
-Source0: 	http://www.enthought.com/repo/ets/%{module}-%{version}.tar.gz
+Name: 	 	python-%{module}
+Version: 	4.3.0
+Release: 	1
+Source0: 	https://www.enthought.com/repo/ets/ets-%{version}.tar.gz
+Patch0:         ets-4.3.0.test_fix.patch
 License: 	BSD
 Group: 	 	Development/Python
 Url: 	 	https://github.com/enthought/ets/
-BuildRoot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: 	noarch
 Obsoletes:	python-enthought
 Obsoletes:	python-enthought-enthoughtbase
-Requires: 	python-apptools == 4.1.0
-Requires: 	python-blockcanvas == 4.0.1
-Requires:	python-chaco == 4.2.0
-Requires:	python-codetools == 4.0.0
-Requires: 	python-enable == 4.2.0
-Requires:	python-enaml == 0.2.0
-Requires: 	python-envisage == 4.2.0
-Requires: 	python-etsdevtools == 4.0.0
-Requires: 	python-graphcanvas == 4.0.0
-Requires: 	python-mayavi == 4.2.0
-Requires: 	python-pyface == 4.2.0
-Requires: 	python-scimath == 4.1.0
-Requires: 	python-traits == 4.2.0
-Requires: 	python-traitsui == 4.2.0
 BuildRequires: 	python-setuptools >= 0.6c8
 BuildRequires:	python-setupdocs >= 1.0.5
 BuildRequires:	python-sphinx
@@ -48,20 +26,16 @@ components comprised by the suite.
 
 %prep 
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 %__python setup.py build
 %__python setup.py build_docs
 
 %install
-%__rm -rf %{buildroot}
 PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 
-%clean
-%__rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc *.txt *.rst build/docs/html
 %_bindir/%{module}*
 %py_sitedir/%{module}*
@@ -103,5 +77,6 @@ PYTHONDONTWRITEBYTECODE= %__python setup.py install --root=%{buildroot}
 * Thu Jul 07 2011 Lev Givon <lev@mandriva.org> 4.0.0-1
 + Revision: 689153
 - import python-ets
+
 
 

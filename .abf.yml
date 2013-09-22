@@ -1,2 +1,4 @@
+removed_sources:
+  ets-4.2.0.tar.gz: 59b95f401e4a2e7700805e0cb823234694e7e765
 sources:
-  "ets-4.2.0.tar.gz": 59b95f401e4a2e7700805e0cb823234694e7e765
+  ets-4.3.0.tar.gz: a5c9e70ae92c2516d38fa581ee443d756fd6d11d
