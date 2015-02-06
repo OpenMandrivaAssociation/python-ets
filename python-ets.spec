@@ -3,7 +3,7 @@
 Summary:	Enthought Tool Suite
 Name: 	 	python-%{module}
 Version: 	4.3.0
-Release: 	1
+Release: 	2
 Source0: 	https://www.enthought.com/repo/ets/ets-%{version}.tar.gz
 Patch0:         ets-4.3.0.test_fix.patch
 License: 	BSD
