@@ -1,9 +1,10 @@
---- ets-4.2.0.old/setup_data.py	2013-03-29 00:23:51.000000000 +0400
-+++ ets-4.2.0/setup_data.py	2013-09-22 06:02:37.000000000 +0400
-@@ -21,5 +21,5 @@
+diff -up python-ets-4.4.4/setup_data.py.1~ python-ets-4.4.4/setup_data.py
+--- python-ets-4.4.4/setup_data.py.1~	2024-07-07 19:45:05.508827725 +0200
++++ python-ets-4.4.4/setup_data.py	2024-07-07 19:46:59.662557369 +0200
+@@ -19,5 +19,5 @@ requirements = [
  INFO = {
      'name': 'ets',
-     'version': '4.3.0',
+     'version': '4.4.4',
 -    'install_requires': ['%s >= %s.dev' % nv for nv in requirements],
 +    'install_requires': ['%s >= %s' % nv for nv in requirements],
  }

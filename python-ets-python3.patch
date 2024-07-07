@@ -1,0 +1,15 @@
+diff -up python-ets-4.4.4/setup.py.omv~ python-ets-4.4.4/setup.py
+--- python-ets-4.4.4/setup.py.omv~	2024-07-07 19:54:25.920773313 +0200
++++ python-ets-4.4.4/setup.py	2024-07-07 19:55:15.929418617 +0200
+@@ -5,9 +5,8 @@ import sys
+ from setuptools import setup
+ 
+ 
+-setup_data = {}
+-execfile('setup_data.py', setup_data)
+-INFO = setup_data['INFO']
++import setup_data
++INFO = setup_data.INFO
+ 
+ if 'develop' in sys.argv:
+     INFO['install_requires'] = []
