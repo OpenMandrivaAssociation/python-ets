@@ -3,7 +3,7 @@
 Summary:	Enthought Tool Suite
 Name: 	 	python-%{module}
 Version: 	4.4.4
-Release: 	1
+Release: 	2
 Source0: 	https://pypi.python.org/packages/source/e/ets/ets-%{version}.tar.gz
 License: 	BSD
 Group: 	 	Development/Python
